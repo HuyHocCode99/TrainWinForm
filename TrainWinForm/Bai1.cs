@@ -34,7 +34,7 @@ namespace TrainWinForm
 
 
         }
->>>>>>> e73b30e59ab4a7a94d968c3673777a52a6020ae9
+
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -73,44 +73,7 @@ namespace TrainWinForm
             drvSinhVien.DataSource = tbSinhVien;
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra xem có dòng nào được chọn không
-            if (drvSinhVien.SelectedRows.Count > 0)
-            {
-                //Kiểm tra xem mã sinh viên có tồn tại hay không 
-                int selectedIndex = drvSinhVien.SelectedRows[0].Index;
-                DataRow dataRow = tbSinhVien.Rows[selectedIndex];
-
-                string MaSVCu = dataRow["Mã Sinh Viên"].ToString();
-                string MaxSVToCheck = txtMASV.Text.Trim();
-                foreach (DataRow row in tbSinhVien.Rows)
-                {
-                    if (row["Mã Sinh Viên"].ToString() == MaxSVToCheck)
-                    {
-                        MessageBox.Show("Mã sinh viên đã tồn tại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                }
-
-
-
-
-                    
-                DataGridViewRow selectedRow = drvSinhVien.SelectedRows[0];
-                selectedRow.Cells["Mã Sinh Viên"].Value = MaxSVToCheck;
-                selectedRow.Cells["Họ Tên"].Value = txtHoTen.Text;
-                selectedRow.Cells["Lớp"].Value = txtLop.Text;
-                txtHoTen.Clear();
-                txtLop.Clear();
-                txtMASV.Clear();
-            }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một sinh viên để sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
+        
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if(drvSinhVien.SelectedRows.Count > 0)
