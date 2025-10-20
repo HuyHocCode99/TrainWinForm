@@ -18,7 +18,23 @@ namespace TrainWinForm
         {
             InitializeComponent();
         }
-        
+        public class SinhVien
+        {
+            public string MaSV { get; set; }
+            public string HoTen { get; set; }
+            public string Lop { get; set; }
+
+            // Constructor
+            public SinhVien(string maSV, string hoTen, string lop)
+            {
+                this.MaSV = maSV;
+                this.HoTen = hoTen;
+                this.Lop = lop;
+            }
+
+
+        }
+>>>>>>> e73b30e59ab4a7a94d968c3673777a52a6020ae9
 
         private void btnThem_Click(object sender, EventArgs e)
         {
