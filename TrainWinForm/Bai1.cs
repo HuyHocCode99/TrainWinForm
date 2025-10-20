@@ -32,9 +32,13 @@ namespace TrainWinForm
                 this.Lop = lop;
             }
 
-
+////////
         }
-
+        /// <summary>
+        /// ////////
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void btnThem_Click(object sender, EventArgs e)
         {
