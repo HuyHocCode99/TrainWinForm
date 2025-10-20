@@ -32,7 +32,7 @@ namespace TrainWinForm
                 this.Lop = lop;
             }
 
-////////
+///////////
         }
         /// <summary>
         /// ////////
